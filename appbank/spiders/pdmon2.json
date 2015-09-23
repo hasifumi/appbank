@@ -1,10 +1,3 @@
-{"main_type": ["icon-mtype-god", "icon-mtype-dragon"], "main_prop": ["icon-attr-dark"], "name": "No.2260 ヨミ＝ドラゴン"}
-{"main_type": ["icon-mtype-god", "icon-mtype-attack"], "main_prop": ["icon-attr-wood", "icon-attr-dark"], "name": "No.2269 克明の諜報神・石田三成"}
-{"main_type": ["icon-mtype-god", "icon-mtype-attack"], "main_prop": ["icon-attr-wood"], "name": "No.2268 石田三成"}
-{"main_type": ["icon-mtype-god", "icon-mtype-vitality"], "main_prop": ["icon-attr-water", "icon-attr-fire"], "name": "No.2267 稀代の智謀神・毛利元就"}
-{"main_type": ["icon-mtype-god", "icon-mtype-vitality"], "main_prop": ["icon-attr-water"], "name": "No.2266 毛利元就"}
-{"main_type": ["icon-mtype-god", "icon-mtype-attack"], "main_prop": ["icon-attr-fire", "icon-attr-fire"], "name": "No.2265 苛烈の勇猛神・真田幸村"}
-{"main_type": ["icon-mtype-god", "icon-mtype-attack"], "main_prop": ["icon-attr-fire"], "name": "No.2264 真田幸村"}
-{"main_type": ["icon-mtype-evil"], "main_prop": ["icon-attr-water", "icon-attr-dark"], "name": "No.2263 刻薄の凍冥魔・インディゴ"}
-{"main_type": ["icon-mtype-evil"], "main_prop": ["icon-attr-water", "icon-attr-dark"], "name": "No.2262 凍冥魔・インディゴ"}
-{"main_type": ["icon-mtype-god", "icon-mtype-dragon"], "main_prop": ["icon-attr-dark", "icon-attr-light"], "name": "No.2261 夜刻神・ツクヨミ＝ドラゴン"}
+{"mon_no": "2262", "main_prop": "icon-attr-water", "name": "凍冥魔・インディゴ", "sub_prop": "icon-attr-dark", "main_type": ["icon-mtype-evil"], "sub_type": ""}
+{"mon_no": "2261", "main_prop": "icon-attr-dark", "name": "夜刻神・ツクヨミ＝ドラゴン", "sub_prop": "icon-attr-light", "main_type": ["icon-mtype-god", "icon-mtype-dragon"], "sub_type": "icon-mtype-dragon"}
+{"mon_no": "2260", "main_prop": "icon-attr-dark", "name": "ヨミ＝ドラゴン", "sub_prop": "", "main_type": ["icon-mtype-god", "icon-mtype-dragon"], "sub_type": "icon-mtype-dragon"}

@@ -1,3 +1,3 @@
-{"mon_no": "2262", "main_prop": "icon-attr-water", "name": "凍冥魔・インディゴ", "sub_prop": "icon-attr-dark", "main_type": ["icon-mtype-evil"], "sub_type": ""}
-{"mon_no": "2261", "main_prop": "icon-attr-dark", "name": "夜刻神・ツクヨミ＝ドラゴン", "sub_prop": "icon-attr-light", "main_type": ["icon-mtype-god", "icon-mtype-dragon"], "sub_type": "icon-mtype-dragon"}
-{"mon_no": "2260", "main_prop": "icon-attr-dark", "name": "ヨミ＝ドラゴン", "sub_prop": "", "main_type": ["icon-mtype-god", "icon-mtype-dragon"], "sub_type": "icon-mtype-dragon"}
+{"mon_no": "2260", "name": "ヨミ＝ドラゴン", "costs": "80", "stars": "8", "props": ["dark"], "types": ["god", "dragon"]}
+{"mon_no": "2262", "name": "凍冥魔・インディゴ", "costs": "30", "stars": "5", "props": ["water", "dark"], "types": ["evil"]}
+{"mon_no": "2261", "name": "夜刻神・ツクヨミ＝ドラゴン", "costs": "99", "stars": "9", "props": ["dark", "light"], "types": ["god", "dragon"]}

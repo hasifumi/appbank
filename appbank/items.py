@@ -9,16 +9,13 @@ import scrapy
 
 
 class AppbankItem(scrapy.Item):
-   #title = scrapy.Field()
    mon_no = scrapy.Field()
    name = scrapy.Field()
-   main_prop = scrapy.Field()
-   sub_prop = scrapy.Field()
+   props = scrapy.Field()
    stars = scrapy.Field()
    costs = scrapy.Field()
    max_lvl = scrapy.Field()
-   main_type = scrapy.Field()
-   sub_type = scrapy.Field()
+   types = scrapy.Field()
    hp_init = scrapy.Field()
    hp_max = scrapy.Field()
    hp_plus = scrapy.Field()

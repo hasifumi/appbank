@@ -1,0 +1,10 @@
+{"function": "4ターンの間、火属性の攻撃力を少し上げ、攻撃力×40倍の火属性で攻撃する（火属性の攻撃力を1.3倍にする）", "turn_max": 11, "name": "ゴッドマグマブレス", "level_max": "13", "skill_no": "108", "turn_init": "23"}
+{"function": "光ドロップを闇に、回復ドロップを光に変化。", "turn_max": 7, "name": "ダブルドロップ変化・闇光", "level_max": "7", "skill_no": "107", "turn_init": "13"}
+{"function": "闇ドロップを光に、回復ドロップを闇に変化。", "turn_max": 7, "name": "ダブルドロップ変化・光闇", "level_max": "7", "skill_no": "106", "turn_init": "13"}
+{"function": "水ドロップを木に、回復ドロップを水に変化。", "turn_max": 7, "name": "ダブルドロップ変化・木水", "level_max": "7", "skill_no": "105", "turn_init": "13"}
+{"function": "火ドロップを水に、回復ドロップを火に変化。", "turn_max": 7, "name": "ダブルドロップ変化・水火", "level_max": "7", "skill_no": "104", "turn_init": "13"}
+{"function": "木ドロップを火に、回復ドロップを木に変化。", "turn_max": 7, "name": "ダブルドロップ変化・火木", "level_max": "7", "skill_no": "103", "turn_init": "13"}
+{"function": "光ドロップを闇ドロップに変化させる", "turn_max": 5, "name": "ドロップ変化・闇", "level_max": "5", "skill_no": "102", "turn_init": "9"}
+{"function": "闇ドロップを光ドロップに変化させる", "turn_max": 5, "name": "ドロップ変化・光", "level_max": "5", "skill_no": "101", "turn_init": "9"}
+{"function": "火ドロップを木ドロップに変化させる", "turn_max": 5, "name": "ドロップ変化・木", "level_max": "5", "skill_no": "100", "turn_init": "9"}
+{"function": "4ターンの間、水属性の攻撃力を少し上げ、攻撃力×40倍の水属性で攻撃する（水属性の攻撃力を1.3倍にする）", "turn_max": 11, "name": "ゴッドブリザードブレス", "level_max": "13", "skill_no": "109", "turn_init": "23"}

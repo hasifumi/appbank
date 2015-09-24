@@ -30,6 +30,14 @@ class AppbankItem(scrapy.Item):
    awaken_skills = scrapy.Field()
    mon_no_evolution_before = scrapy.Field()
 
+class SkillItem(scrapy.Item):
+    skill_no = scrapy.Field()
+    name = scrapy.Field()
+    turn_init = scrapy.Field()
+    turn_max = scrapy.Field()
+    level_max = scrapy.Field()
+    function = scrapy.Field()
+
 class LeaderSkillItem(scrapy.Item):
     leader_skill_no = scrapy.Field()
     name = scrapy.Field()

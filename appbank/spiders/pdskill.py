@@ -12,7 +12,7 @@ class PdSkillSpider(CrawlSpider):
     start_urls = ['http://pd.appbank.net/skill/list']
 
     rules = (
-        Rule(LinkExtractor(allow=r'/10[\d]'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'/[\d]'), callback='parse_item', follow=True),
     )
 
     def parse_item(self, response):

@@ -14,6 +14,8 @@ class PdSkillSpider(CrawlSpider):
     rules = (
         Rule(LinkExtractor(allow=r'/[\d]'), callback='parse_item', follow=True),
     )
+        #Rule(LinkExtractor(allow=r'/[\d]'), callback='parse_item', follow=True),
+        #Rule(LinkExtractor(allow=r'/10[\d]'), callback='parse_item', follow=True),
 
     def parse_item(self, response):
         regex = u'skill/(\d+)'

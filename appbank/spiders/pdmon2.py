@@ -10,13 +10,15 @@ from appbank.items import AppbankItem
 class Pdmon2Spider(CrawlSpider):
     name = 'pdmon2'
     allowed_domains = ['pd.appbank.net']
-    #start_urls = ['http://pd.appbank.net/ml1']
-    start_urls = ['http://pd.appbank.net/ml23']
+    start_urls = ['http://pd.appbank.net/ml1']
+    #start_urls = ['http://pd.appbank.net/ml23']
+    #start_urls = ['http://pd.appbank.net/ml24']
 
     rules = (
         #Rule(LinkExtractor(allow=r'/m\d\d\d$'), callback='parse_item', follow=True),
-        Rule(LinkExtractor(allow=r'/m226[0-2]'), callback='parse_item', follow=True),
-        #Rule(LinkExtractor(allow=r'/m\d'), callback='parse_item', follow=True),
+        #Rule(LinkExtractor(allow=r'/m226[0-2]'), callback='parse_item', follow=True),
+        #Rule(LinkExtractor(allow=r'/m2392'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'/m\d'), callback='parse_item', follow=True),
         #Rule(LinkExtractor(allow=r'/m\d\d\d.php'), callback='parse_item', follow=True),
     )
 
@@ -41,8 +43,20 @@ class Pdmon2Spider(CrawlSpider):
         types = map(self.format_type, icon_types)
 
         skill_no = response.css('div#monster p.skill-name a[href*=skill]::attr(href)').extract()
+        skill_no = self.format_etc(skill_no[0])
 
         leader_skill_no = response.css('div#monster p.skill-name a[href*=leader]::attr(href)').extract()
+        leader_skill_no = self.format_etc(leader_skill_no[0])
+
+        awakens = response.css('div#monster p.skill-name a[href*=kakusei]::attr(href)').extract()
+        awaken_skills = []
+        for i in awakens:
+            awaken_skills.append(self.format_etc(i))
+
+        print awaken_skills
+
+        mon_no_evolution_before = response.css('div#monster div.evo-monster a::attr(href)').extract()
+        mon_no_evolution_before = self.format_etc(mon_no_evolution_before[0])
 
 	item = AppbankItem(
                 mon_no = mon_no,
@@ -53,6 +67,8 @@ class Pdmon2Spider(CrawlSpider):
                 costs = costs,
                 skill_no = skill_no,
                 leader_skill_no = leader_skill_no,
+                awaken_skills = awaken_skills,
+                mon_no_evolution_before = mon_no_evolution_before,
         )
 	return item
 
@@ -68,6 +84,10 @@ class Pdmon2Spider(CrawlSpider):
         m = match.group('type')
         return m
 
+    def format_etc(self, etc):
+        regex = u'([\d]+)'
+        match = re.search(regex, etc, re.U)
+        return match.group()
 
 #class AppbankItem(scrapy.Item):
 #   mon_no = scrapy.Field()
@@ -88,5 +108,5 @@ class Pdmon2Spider(CrawlSpider):
 #   recovery_plus = scrapy.Field()
 #   skill_no = scrapy.Field()
 #   leader_skill_no = scrapy.Field()
-#   awaked_skills = scrapy.Field()
+#   awaken_skills = scrapy.Field()
 #   mon_no_evolution_before = scrapy.Field()

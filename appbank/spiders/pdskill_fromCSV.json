@@ -681,4 +681,4 @@
 {"function": "自分の攻撃力×3倍の闇属性攻撃", "turn_max": "5", "name": "ダークブレス", "level_max": "6", "skill_no": "5", "turn_init": "10"},
 {"function": "自分の攻撃力×3倍の光属性攻撃", "turn_max": "5", "name": "フラッシュブレス", "level_max": "6", "skill_no": "4", "turn_init": "10"},
 {"function": "自分の攻撃力×3倍の木属性攻撃", "turn_max": "5", "name": "ウィンドブレス", "level_max": "6", "skill_no": "3", "turn_init": "10"},
-{"function": "自分の攻撃力×3倍の水属性攻撃", "turn_max": "5", "name": "コールドブレス", "level_max": "6", "skill_no": "2", "turn_init": "10"}
+{"function": "自分の攻撃力×3倍の水属性攻撃", "turn_max": "5", "name": "コールドブレス", "level_max": "6", "skill_no": "2", "turn_init": "10"},

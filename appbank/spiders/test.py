@@ -11,11 +11,11 @@ class Pdmon2Spider(CrawlSpider):
     name = 'pdmon2'
     allowed_domains = ['pd.appbank.net']
     #start_urls = ['http://pd.appbank.net/ml1']
-    start_urls = ['http://pd.appbank.net/ml23']
+    start_urls = ['http://pd.appbank.net/ml24']
 
     rules = (
         #Rule(LinkExtractor(allow=r'/m\d\d\d$'), callback='parse_item', follow=True),
-        Rule(LinkExtractor(allow=r'/m226[0-2]'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'/m2392'), callback='parse_item', follow=True),
         #Rule(LinkExtractor(allow=r'/m\d'), callback='parse_item', follow=True),
         #Rule(LinkExtractor(allow=r'/m\d\d\d.php'), callback='parse_item', follow=True),
     )
@@ -40,9 +40,11 @@ class Pdmon2Spider(CrawlSpider):
         icon_types = response.css('div#monster div.detail p.icon-mtype i[class*=icon-mtype]::attr(class)').extract()
         types = map(self.format_type, icon_types)
 
-        skill_no = response.css('div#monster p.skill-name a[href*=skill]::attr(href)').extract()
-
-        leader_skill_no = response.css('div#monster p.skill-name a[href*=leader]::attr(href)').extract()
+        #leader_skill_no = response.css('div#monster p.skill-name::text').extract()
+        leader_skill_no = response.css('div#monster p.skill-name a[href*=skill]::attr(href)').extract()
+        print "*+*+*+*+*+*"
+        print leader_skill_no
+        print "*+*+*+*+*+*"
 
 	item = AppbankItem(
                 mon_no = mon_no,
@@ -51,7 +53,6 @@ class Pdmon2Spider(CrawlSpider):
                 types = types,
                 stars = stars,
                 costs = costs,
-                skill_no = skill_no,
                 leader_skill_no = leader_skill_no,
         )
 	return item

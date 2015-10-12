@@ -12,8 +12,9 @@ class PdLeaderSpider(CrawlSpider):
     start_urls = ['http://pd.appbank.net/leader/list']
 
     rules = (
-        Rule(LinkExtractor(allow=r'/100[\d]'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'/[\d]'), callback='parse_item', follow=True),
     )
+    #    Rule(LinkExtractor(allow=r'/100[\d]'), callback='parse_item', follow=True),
 
     def parse_item(self, response):
         regex = u'leader/(\d+)'

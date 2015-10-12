@@ -1,6 +1,3 @@
-{"function": "HPが200アップします", "awaken_skill_no": "1", "name": "HP強化"}
-{"function": "自分と同じ属性のドロップを4個消すと攻撃力がアップし、敵2体に攻撃をする（攻撃力アップは1.5倍）", "awaken_skill_no": "27", "name": "2体攻撃"}
-{"function": "チーム全体のスキルが1ターン溜まった状態で始まる", "awaken_skill_no": "21", "name": "スキルブースト"}
 {"function": "回復ドロップを横一列でそろえて消すとバインド状態が3ターン回復する", "awaken_skill_no": "20", "name": "バインド回復"}
 {"function": "ドロップ操作時間が少し延びる（1つにつき0.5秒延長）", "awaken_skill_no": "19", "name": "操作時間延長"}
 {"function": "ドロップを消したターン、HPが回復する（1つにつき500回復）", "awaken_skill_no": "9", "name": "自動回復"}
@@ -17,6 +14,8 @@
 {"function": "強化された闇ドロップの出現率とダメージがアップする", "awaken_skill_no": "18", "name": "闇ドロップ強化"}
 {"function": "強化された光ドロップの出現率とダメージがアップする", "awaken_skill_no": "17", "name": "光ドロップ強化"}
 {"function": "強化された木ドロップの出現率とダメージがアップする", "awaken_skill_no": "16", "name": "木ドロップ強化"}
+{"function": "自分と同じ属性のドロップを4個消すと攻撃力がアップし、敵2体に攻撃をする（攻撃力アップは1.5倍）", "awaken_skill_no": "27", "name": "2体攻撃"}
+{"function": "チーム全体のスキルが1ターン溜まった状態で始まる", "awaken_skill_no": "21", "name": "スキルブースト"}
 {"function": "強化された水ドロップの出現率とダメージがアップする", "awaken_skill_no": "15", "name": "水ドロップ強化"}
 {"function": "強化された火ドロップの出現率とダメージがアップする", "awaken_skill_no": "14", "name": "火ドロップ強化"}
 {"function": "闇属性モンスターから受けるダメージを軽減します（1つにつき5％軽減）", "awaken_skill_no": "8", "name": "闇ダメージ軽減"}
@@ -26,3 +25,4 @@
 {"function": "火属性モンスターから受けるダメージを軽減します（1つにつき5％軽減）", "awaken_skill_no": "4", "name": "火ダメージ軽減"}
 {"function": "回復力が50アップします", "awaken_skill_no": "3", "name": "回復強化"}
 {"function": "攻撃力が100アップします", "awaken_skill_no": "2", "name": "攻撃強化"}
+{"function": "HPが200アップします", "awaken_skill_no": "1", "name": "HP強化"}

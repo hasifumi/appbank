@@ -1,0 +1,5 @@
+{"function": "自分の攻撃力×3倍の火属性攻撃", "turn_max": 5, "name": "ヒートブレス", "level_max": "6", "skill_no": "1", "turn_init": "10"}
+{"function": "敵全体に闇属性のランダムダメージ。", "turn_max": 5, "name": "ラッキー？リボン", "level_max": "16", "skill_no": "316", "turn_init": "20"}
+{"function": "敵1体に攻撃力×2倍の攻撃、ダメージ分のHPを回復。", "turn_max": 3, "name": "けろけろアターック！", "level_max": "5", "skill_no": "309", "turn_init": "7"}
+{"function": "2ターンの間、ドラゴンタイプの攻撃力を少し上げ、さらに攻撃力×20倍の水属性で攻撃する", "turn_max": 10, "name": "エクスフリーズブレス", "level_max": "11", "skill_no": "300", "turn_init": "20"}
+{"function": "2ターンの間、ドラゴンタイプの攻撃力を少し上げ、さらに攻撃力×20倍の火属性で攻撃する", "turn_max": 10, "name": "ヘルファイヤブレス", "level_max": "11", "skill_no": "299", "turn_init": "20"}

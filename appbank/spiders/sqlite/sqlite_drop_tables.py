@@ -8,13 +8,15 @@ con.text_factory = str
 
 cur = con.cursor()
 
-cur.execute("drop table skill")
+#cur.execute("drop table skill")
 
 #cur.execute("drop table leader")
 
 #cur.execute("drop table awaken")
 
 #cur.execute("drop table monster")
+
+cur.execute("drop table mon_awaken")
 
 con.commit()
 

@@ -10,7 +10,7 @@ cur = con.cursor()
 
 
 cur.execute("""
-  delete from mon_type;
+  delete from monster;
 """)
 
 con.commit()

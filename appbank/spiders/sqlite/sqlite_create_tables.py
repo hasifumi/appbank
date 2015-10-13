@@ -36,23 +36,23 @@ cur = con.cursor()
 #        function text);
 #""")
 
-#cur.execute("""
-#  create table monster(
-#        mon_no integer,
-#        name text,
-#        skill_no integer,
-#        leader_skill_no integer
-#        );
-#""")
+cur.execute("""
+  create table monster(
+        mon_no integer,
+        name text,
+        skill_no integer,
+        leader_skill_no integer
+        );
+""")
 
-#cur.execute("""
-#  create table mon_awaken(
-#        mon_no integer,
-#        seq integer,
-#        awaken_skill_no integer,
-#        PRIMARY KEY(mon_no, seq)
-#        );
-#""")
+cur.execute("""
+  create table mon_awaken(
+        mon_no integer,
+        seq integer,
+        awaken_skill_no integer,
+        PRIMARY KEY(mon_no, seq)
+        );
+""")
 
 cur.execute("""
   create table mon_prop(

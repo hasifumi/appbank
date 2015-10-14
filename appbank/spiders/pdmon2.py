@@ -13,11 +13,12 @@ class Pdmon2Spider(CrawlSpider):
     start_urls = ['http://pd.appbank.net/ml']
     #start_urls = ['http://pd.appbank.net/ml23']
     #start_urls = ['http://pd.appbank.net/ml24']
+    #start_urls = ['http://pd.appbank.net/ml14']
 
     rules = (
         #Rule(LinkExtractor(allow=r'/m\d\d\d$'), callback='parse_item', follow=True),
         #Rule(LinkExtractor(allow=r'/m23\d\d'), callback='parse_item', follow=True),
-        #Rule(LinkExtractor(allow=r'/m2392'), callback='parse_item', follow=True),
+        #Rule(LinkExtractor(allow=r'/m1325'), callback='parse_item', follow=True),
         Rule(LinkExtractor(allow=r'/m\d'), callback='parse_item', follow=True),
         #Rule(LinkExtractor(allow=r'/m\d\d\d.php'), callback='parse_item', follow=True),
     )
@@ -42,6 +43,18 @@ class Pdmon2Spider(CrawlSpider):
         icon_types = response.css('div#monster div.detail p.icon-mtype i[class*=icon-mtype]::attr(class)').extract()
         types = map(self.format_type, icon_types)
 
+        table_data = response.css('div#monster div.space table tr td::text').extract()
+        print table_data
+        hp_init       = table_data[6].replace(",","")  if table_data[6].replace(",","").isdigit() else 0
+        attack_init   = table_data[7].replace(",","")  if table_data[7].replace(",","").isdigit() else 0
+        recovery_init = table_data[8].replace(",","")  if table_data[8].replace(",","").isdigit() else 0
+        hp_max        = table_data[11].replace(",","") if table_data[11].replace(",","").isdigit() else 0
+        attack_max    = table_data[12].replace(",","") if table_data[12].replace(",","").isdigit() else 0
+        recovery_max  = table_data[13].replace(",","") if table_data[13].replace(",","").isdigit() else 0
+        hp_plus       = table_data[16].replace(",","") if ( len(table_data) >15 and table_data[16].replace(",","").isdigit()) else 0
+        attack_plus   = table_data[17].replace(",","") if ( len(table_data) >15 and table_data[17].replace(",","").isdigit()) else 0
+        recovery_plus = table_data[18].replace(",","") if ( len(table_data) >15 and table_data[18].replace(",","").isdigit()) else 0
+
         skill_no = response.css('div#monster p.skill-name a[href*=skill]::attr(href)').extract()
         skill_no = self.format_etc(skill_no[0]) if len(skill_no) > 0 else None
 
@@ -52,8 +65,6 @@ class Pdmon2Spider(CrawlSpider):
         awaken_skills = []
         for i in awakens:
             awaken_skills.append(self.format_etc(i))
-
-        #print awaken_skills
 
         mon_no_evolution_before = response.css('div#monster div.evo-monster a::attr(href)').extract()
         mon_no_evolution_before = self.format_etc(mon_no_evolution_before[0]) if len(mon_no_evolution_before) > 0 else None
@@ -69,6 +80,15 @@ class Pdmon2Spider(CrawlSpider):
                 leader_skill_no = leader_skill_no,
                 awaken_skills = awaken_skills,
                 mon_no_evolution_before = mon_no_evolution_before,
+                hp_init = hp_init,
+                hp_max = hp_max,
+                hp_plus = hp_plus,
+                attack_init = attack_init,
+                attack_max = attack_max,
+                attack_plus = attack_plus,
+                recovery_init = recovery_init,
+                recovery_max = recovery_max,
+                recovery_plus = recovery_plus,
         )
 	return item
 

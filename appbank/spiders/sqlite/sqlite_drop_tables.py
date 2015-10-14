@@ -16,11 +16,11 @@ cur = con.cursor()
 
 cur.execute("drop table monster")
 
-cur.execute("drop table mon_awaken")
+#cur.execute("drop table mon_awaken")
 
-cur.execute("drop table mon_type")
+#cur.execute("drop table mon_type")
 
-cur.execute("drop table mon_prop")
+#cur.execute("drop table mon_prop")
 
 con.commit()
 

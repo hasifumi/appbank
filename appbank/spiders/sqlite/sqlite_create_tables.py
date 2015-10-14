@@ -41,36 +41,46 @@ cur.execute("""
         mon_no integer,
         name text,
         skill_no integer,
-        leader_skill_no integer
+        leader_skill_no integer,
+        hp_init integer,
+        hp_max integer,
+        hp_plus integer,
+        attack_init integer,
+        attack_max integer,
+        attack_plus integer,
+        recovery_init integer,
+        recovery_max integer,
+        recovery_plus integer,
+        PRIMARY KEY(mon_no)
         );
 """)
 
-cur.execute("""
-  create table mon_awaken(
-        mon_no integer,
-        seq integer,
-        awaken_skill_no integer,
-        PRIMARY KEY(mon_no, seq)
-        );
-""")
-
-cur.execute("""
-  create table mon_prop(
-        mon_no integer,
-        seq integer,
-        prop text,
-        PRIMARY KEY(mon_no, seq)
-        );
-""")
-
-cur.execute("""
-  create table mon_type(
-        mon_no integer,
-        seq integer,
-        type text,
-        PRIMARY KEY(mon_no, seq)
-        );
-""")
+#cur.execute("""
+#  create table mon_awaken(
+#        mon_no integer,
+#        seq integer,
+#        awaken_skill_no integer,
+#        PRIMARY KEY(mon_no, seq)
+#        );
+#""")
+#
+#cur.execute("""
+#  create table mon_prop(
+#        mon_no integer,
+#        seq integer,
+#        prop text,
+#        PRIMARY KEY(mon_no, seq)
+#        );
+#""")
+#
+#cur.execute("""
+#  create table mon_type(
+#        mon_no integer,
+#        seq integer,
+#        type text,
+#        PRIMARY KEY(mon_no, seq)
+#        );
+#""")
 
 con.commit()
 

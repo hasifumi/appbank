@@ -8,7 +8,7 @@ con.text_factory = str
 
 cur = con.cursor()
 
-#cur.execute("drop table skill")
+cur.execute("drop table skill")
 
 #cur.execute("drop table leader")
 

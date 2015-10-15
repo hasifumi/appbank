@@ -11,16 +11,16 @@ con.text_factory = str
 
 cur = con.cursor()
 
-#cur.execute("""
-#  create table skill(
-#        skill_no integer,
-#        name text,
-#        turn_init integer,
-#        level_max integer,
-#        turn_max integer,
-#        function text,
-#        PRIMARY KEY(skill_no));
-#""")
+cur.execute("""
+  create table skill(
+        skill_no integer,
+        name text,
+        turn_init integer,
+        level_max integer,
+        turn_max integer,
+        function text,
+        PRIMARY KEY(skill_no));
+""")
 
 #cur.execute("""
 #  create table leader(

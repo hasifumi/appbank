@@ -20,10 +20,13 @@ def pd_mon_list():
       select monster.mon_no,
              monster.name,
              skill.name,
-             skill.function
-      from monster, skill
+             skill.function,
+             leader.name,
+             leader.function
+      from monster
+        left outer join skill on monster.skill_no = skill.skill_no
+        left outer join leader on monster.leader_skill_no = leader.leader_skill_no
       where monster.mon_no <= {upper}
-        and monster.skill_no = skill.skill_no
       order by monster.mon_no
     """
 
